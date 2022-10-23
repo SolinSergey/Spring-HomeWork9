@@ -31,7 +31,7 @@ public class ProductController {
         Optional<Product> product = productService.findById(id);
         if (product.isPresent()) {
             return product;
-        }else return Optional.empty();
+        } else return Optional.empty();
     }
 
     @PostMapping
@@ -51,5 +51,4 @@ public class ProductController {
         productService.saveProduct(product);
         return ResponseEntity.ok().body(HttpStatus.OK);
     }
-
 }
